@@ -12,14 +12,12 @@ Git
 Follow these steps to set up the project locally:
 
 Step 1: Clone or Create the Project Directory
-Bash
+```Bash
 
+git clone https://github.com/Rai-190599/mera_fastapi_project.git
+```
 
-mkdir mera_fastapi_project
-cd mera_fastapi_project
 Step 2: Set up a Virtual Environment
-Bash
-
 
 # Create virtual environment
 ```python -m venv venv```
