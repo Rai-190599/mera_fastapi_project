@@ -22,35 +22,42 @@ Bash
 
 
 # Create virtual environment
-python -m venv venv
+```python -m venv venv```
 
 # Activate virtual environment
 # On Windows:
-venv\\Scripts\\activate
+```venv\\Scripts\\activate```
 # On Mac/Linux:
-source venv/bin/activate
+```source venv/bin/activate```
+
 Step 3: Install Dependencies
 Make sure your requirements.txt is updated, then run:
 
-Bash
-
+```Bash
 
 pip install -r requirements.txt
+
+```
+
 🐳 Running the Application
 Step 1: Start the PostgreSQL Database (Docker)
 Ensure Docker Desktop is running, then spin up the database container:
 
-Bash
+```Bash
 
 
 docker compose up -d
+
+```
 Step 2: Run the FastAPI Server
 Start the development server using Uvicorn:
 
-Bash
+```Bash
 
 
 uvicorn main:app --reload
+
+```
 The server will be live at http://127.0.0.1:8000/.
 
 🧪 Testing the Database "Down" Scenario
@@ -64,10 +71,12 @@ JSON
 { "message": "DB connected" }
 Stop the Database Container: Run the following command in your terminal:
 
-Bash
+```Bash
 
 
 docker stop fastapi_postgres_db
+
+```
 Verify Fail Response: Refresh http://127.0.0.1:8000/. You should now see:
 
 JSON
@@ -76,7 +85,9 @@ JSON
 { "message": "Failed to connect" }
 Restart the Database: To restore the connection, run:
 
-Bash
+```Bash
 
 
 docker start fastapi_postgres_db
+
+```
